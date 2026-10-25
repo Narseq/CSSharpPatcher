@@ -40,9 +40,9 @@ public class CSSharpPatcher : BasePlugin, IPluginConfig<PatcherConfig>
 {
   public override string ModuleName => "CSSharpPatcher";
 
-  public override string ModuleVersion => "1.0.1";
+  public override string ModuleVersion => "1.0.2";
 
-  public override string ModuleAuthor => "samyyc";
+  public override string ModuleAuthor => "samyyc // edited by Ziuber (Fragujemy.com)";
 
   public PatcherConfig Config { get; set; } = new();
 

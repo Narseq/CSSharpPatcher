@@ -44,7 +44,7 @@ The configuration file (`CSSharpPatcher.json`) uses the following structure:
 ## Building from Source
 
 1. Clone the repository
-2. Install .NET 8.0 SDK
+2. Install .NET 10 SDK
 3. Run `dotnet build` in the project directory
 4. Copy the built files to your CSSharp plugins directory
 
@@ -55,3 +55,14 @@ This project is provided as-is for educational and development purposes. Use at 
 ## Credits
 
 - Memory patching implementation based on work by @xstage
+## Fork: Fragujemy.com
+
+Maintained by **Ziuber** ([Narseq](https://github.com/Narseq)) for the [Fragujemy.com](https://fragujemy.com) CS2 servers.
+
+Changes in 1.0.2:
+- Targets .NET 10 and CounterStrikeSharp 1.0.37x (the runtime current CounterStrikeSharp builds ship with).
+- Patch signatures unchanged from upstream (2026-09-28 update). Checked against the Windows `server.dll` from the 2026-10-23 CS2 build:
+  `EmitSoundVolumeFix` and `TeammateCanBlockGrenade` still match exactly once; `ChangeSubclass` stays disabled (see `note.md`).
+  The Linux signatures were not re-checked here - after a CS2 update run `css_patcher` on the server and check the console for patches that failed to apply.
+
+Original plugin by [samyycX](https://github.com/samyycX/CSSharpPatcher).
